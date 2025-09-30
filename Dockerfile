@@ -35,7 +35,7 @@ RUN ./mvnw package -DskipTests
 # Do the Maven build!
 # Incremental docker builds will resume here when you change sources
 COPY ./src ./src
-RUN ./mvnw package
+RUN ./mvnw package -DskipTests
 
 # --- Build an application container ---
 FROM debian:buster-slim
